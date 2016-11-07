@@ -1,0 +1,918 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldset, img {
+    border: 0;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+li {
+    list-style: none;
+}
+
+caption, th {
+    text-align: left;
+    font-size: 0.266rem;
+    background-color: #e4daca;
+    padding-left: 0.15rem;
+    color: #660000;
+    /* width: 4.99rem; */
+    border: 1px solid #565a5d;
+}
+
+caption, td {
+    text-align: left;
+    font-size: 0.3125rem;
+    background-color: #e4daca;
+    padding-left: 0.15rem;
+    border: 1px solid #565a5d;
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+    /*font-size: 100%;*/
+    font-weight: normal;
+}
+
+q:before, q:after {
+    content: '';
+}
+
+abbr, acronym {
+    border: 0;
+    font-variant: normal;
+}
+
+sup {
+    vertical-align: text-top;
+}
+
+sub {
+    vertical-align: text-bottom;
+}
+
+input, textarea, select {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+input, textarea, select {
+    *font-size: 100%;
+}
+
+legend {
+    color: #000;
+}
+
+img {
+    vertical-align: top;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 75px;
+}
+
+
+body {
+    font-family: "Microsoft YaHei", simSun, "Lucida Grande", "Lucida Sans Unicode", Arial;
+    /*line-height: 170%;*/
+    color: #fff;
+}
+
+i {
+    font-style: normal;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:active {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-touch-callout: none;
+}
+
+/* float*/
+.fltL {
+    float: left;
+}
+
+.fltR {
+    float: right;
+}
+
+.fixR {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.setCenter {
+    margin: 0 auto;
+}
+
+/* clear */
+.clrB {
+    clear: both;
+}
+
+.clrL {
+    clear: left;
+}
+
+.clrR {
+    clear: right;
+}
+
+.clrN {
+    clear: none;
+}
+
+.g-clr {
+    zoom: 1;
+}
+
+.g-clr:after {
+    display: block;
+    clear: both;
+    height: 0;
+    content: "\0020";
+}
+
+/*start*/
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+html#p-index, html#p-index body {
+    background: #424a55;
+}
+
+.warp {
+    position: relative;
+}
+
+/*headerTop*/
+.headerTop {
+    height:1.173rem;
+    background: #fada5a;
+    position: relative;
+}
+
+.headerTop a.backHome {
+    display: block;
+    width: 1.333rem;
+    height: 1.173rem;
+    background: url(../images/backHome.jpg) no-repeat;
+    background-size: contain;
+    float: left;
+}
+
+.headerTop a.menu {
+    display: block;
+    width: 1.5rem;
+    height: 1.36rem;
+    background: url(../images/menu.jpg) no-repeat;
+    background-size: contain;
+    float: right;
+}
+
+.headerTop a.cur {
+    background-position: 0 -1.02rem;
+}
+
+.headerTop p {
+    line-height: 1.173rem;
+    font-size: 0.53rem;
+    float: left;
+
+}
+
+.headerTop p span {
+    padding-left: 0.5rem;
+    border-left: 1px solid #660000;
+    color: #660000;
+}
+
+.menuWarp {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 0;
+    -webkit-transition: opacity .5s ease, height .5s ease;
+    transition: opacity .5s ease, height .5s ease;
+    z-index: 9999;
+}
+
+.menuWarp .menuNav {
+    position: absolute;
+    width: 1.6rem;
+    height: 0;
+    right: 0;
+    top: 1.02rem;
+    /*display: none;*/
+    z-index: 10;
+    overflow: hidden;
+    transition: .5s all ease;
+}
+
+.menuWarp.select .menuNav {
+    height: 100%;
+}
+
+.menuWarp .menuNav li {
+    height: 0.75rem;
+    line-height: 0.75rem;
+    text-align: center;
+    background: #bc0909;
+}
+
+.menuWarp .menuNav li a {
+    color: #fff;
+    font-size: 0.28rem;
+    display: block;
+}
+
+.menuWarp .menuNav li.curr a {
+    background: #d94d00;
+}
+
+.menuWarp.select {
+    opacity: 1;
+    height: 100%
+}
+
+/*header*/
+.header {
+    height: 1.84rem;
+    background: #1583e4;
+    position: relative;
+    padding: 0 0.4rem;
+}
+
+.ny_header {
+    background: #1583e4;
+    height: 1.56rem;
+    padding: 0 0.4rem;
+}
+
+.header a.logo {
+    width: 1.533rem;
+    height: 1.533rem;
+    position: absolute;
+    left: 0.346rem;
+    top: 0.146rem;
+}
+
+.header a.logo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.header .headerTxt {
+    float: left;
+    padding: 0.426rem 0 0 1.7rem;
+}
+
+.header .headerTxt h3 {
+    font-size: 0.469rem;
+    font-weight: bold;
+    line-height: 0.469rem;
+}
+
+.header .headerTxt p {
+    font-size: 0.343rem;
+    line-height: 0.6rem;
+}
+
+.header a.download {
+    display: block;
+    float: right;
+    width: 1.84rem;
+    height: 0.946rem;
+    text-align: center;
+    line-height: 0.98rem;
+    font-size: 0.4375rem;
+    color: #1583e4;
+    background: #fff;
+    border-radius: 0.08rem;
+    margin-top: 0.453rem;
+}
+.goindex{
+    position: absolute;
+    width: 2.44rem;
+    height: 1rem;
+    top: 0.1rem;
+    left: 3.64rem;
+}
+.ny_header .headerTxt{
+    padding: 0.346rem 0 0 1.65rem;
+}
+.ny_header a.download{
+    margin-top: 0.346rem;
+    width: 1.61rem;
+}
+.ny_header .headerTxt p {
+    font-size: 0.28rem;
+    line-height: 0.6rem;
+}
+.nyConTxt .info{
+    width: 6.1rem;
+    float: right;
+}
+/*content*/
+.content {
+    overflow: hidden;
+    width: 100%;
+    height:  14.2rem;
+    background: url(../images/bg.jpg) center top no-repeat #fff;
+    background-size: 100% auto;
+    -webkit-background-size: 100% auto;
+    position: relative;
+}
+
+.content ul {
+    margin: 0 auto;
+    position: relative;
+    height: 7.1rem;
+    width: 7.8rem;
+}
+.content ul.first{
+    margin-top: 8.8rem;
+}
+.content ul li {
+    margin-left: 0.35rem;
+    float: left;
+    width: 3.4133rem;
+    height: 3.4133rem;
+    background-size: cover;
+    -webkit-background-size: contain;
+}
+.content ul li.r2{
+    margin-top: 0.3rem;
+}
+ul.second,ul.third{
+    margin-top: 3.35rem;
+}
+ul.third li.r2{
+    margin-left: 2.15rem;
+}
+.content ul li a {
+    display: block;
+    text-indent: -99999px;
+    width: 3.4133rem;
+    height: 3.4133rem;
+}
+.ny_header a.logo{
+    width: 1.28rem;
+    height: 1.28rem;
+    left: 0.4rem;
+    top: 0.15rem;
+}
+.ny_content {
+    padding: 0 0.54rem;
+    background: url("../images/nybg.jpg") center top no-repeat;
+    overflow: hidden;
+}
+
+.ny_content h3 {
+    height: 1.5rem;
+    line-height: 1.2rem;
+    text-align: center;
+    font-size: 0.48rem;
+    color: #c14930;
+    font-weight: bold;
+    border-bottom:1px solid #e3dac6;
+    margin-top: 0.2rem;
+}
+
+.ny_content .nyConTxt {
+    padding: 0.2rem 0;
+    color: #666;
+}
+
+.nyConTxt h4 {
+    font-size: 0.5rem;
+    margin: 0.56rem 0;
+    color: #90000d;
+    font-weight: bold;
+}
+.nyConTxt h5 {
+    font-size: 0.4375rem;
+    margin: 0.56rem 0;
+}
+.nyConTxt p {
+    font-size: 0.266rem;
+    line-height: 0.75rem;
+    /*text-indent: 2em;*/
+    /*margin: 0.56rem 0;*/
+}
+
+.nyConTxt p a {
+    color: #f45500;
+    text-decoration: underline;
+}
+
+.nyConTxt .table {
+    width: 100%;
+    border-left: 1px solid #ffbc86;
+    border-top: 1px solid #ffbc86;
+    margin-bottom: 0.15rem;
+}
+
+.nyConTxt .table th,
+.nyConTxt .table td {
+    color: #314d63;
+    height: 39px;
+    padding: 0 15px;
+    font-size: 14px;
+    line-height: 29px;
+    background: #d6e9f4;
+    border: 1px solid #8d97be;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.nyConTxt .table th {
+    background: #ffbc86;
+    text-align: center;
+    height: 0.23rem;
+    color: #fff;
+}
+
+.nyConTxt .table td {
+    padding: 0 0.1rem;
+    background: #fff;
+    font-size: 0.24rem;
+    color: #7a7a7a;
+    text-align: center;
+}
+
+.nyConTxt .table2 td {
+    text-align: center;
+}
+.ny_content > .fix {
+    width: 90%;
+    margin: 0 auto;
+    margin: 0 auto 0.8rem;
+}
+
+.ny_content > .fix > .line {
+    margin: 0.4rem 0 0.6rem 0;
+    width: 100%;
+    border-bottom: 1px solid #660000;
+    display: block;
+}
+
+.ny_content > .fix h2 {
+    font-size: 0.3rem;
+}
+
+.ny_content > .fix > p{
+    font-size: 0.32rem;
+    color: #660000;
+}
+.ny_content > .fix a {
+    font-size: 0.426rem;
+    color: #660000;
+}
+
+.ny_content > .fix > p .icon-pc {
+    width: 0.4rem;
+    height: 0.4rem;
+    margin: 0.06rem 0.14rem 0 0;
+    background: url("../images/Desktop1.png") no-repeat;
+    background-size: 100%;
+    display: block;
+    float: left;
+}
+.ny_btn_toTop{
+    width: 1.24rem;
+    height: 1.24rem;
+    display: block;
+    position: absolute;
+    bottom: 0.9rem;
+    right: 1.3rem;
+    background: url("../images/top.jpg") no-repeat;
+    background-size: contain;
+}
+
+
+
+.red{
+    color: #f45500;
+}
+/*.nyConTxt .table td p{*/
+/*text-indent: 0;*/
+/*font-size: 1rem;*/
+/*margin-bottom: 0;*/
+/*line-height: 2rem;*/
+/*}*/
+.nyConTxt .table img {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 0;
+}
+
+.nyConTxt img {
+    display: block;
+    width: 6.875rem;
+    height: 5.15rem;
+    margin: 0.4rem auto 0.1rem;
+}
+
+#lateralTips {
+    display: none;
+    position: absolute;
+    z-index: 98;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #333643;
+    color: #fff;
+    text-align: center;
+    font-size: 0.4rem;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+}
+
+#lateralTips p {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+    line-height: 0.5rem;
+}
+
+footer {
+    padding: 0.6rem 0;
+    background: #fff;
+}
+
+footer, footer p, footer a {
+    color: #000;
+}
+
+footer > .fix {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer > .fix > .line {
+    margin: 0.4rem 0 0.6rem 0;
+    width: 100%;
+    border-bottom: 1px solid #ffcc46;
+    display: block;
+}
+
+footer > .fix h2 {
+    font-size: 0.426rem;
+}
+
+footer > .fix > p,
+footer > .fix a {
+    font-size: 0.4rem;
+}
+
+footer > .fix > p .icon-pc {
+    width: 0.4rem;
+    height: 0.4rem;
+    margin: 0.06rem 0.14rem 0 0;
+    background: url("../images/icon.png") no-repeat;
+    background-size: 100%;
+    display: block;
+    float: left;
+}
+
+#share_content {
+    display: none;
+}
+
+
+.btn_toTop {
+    width: 1.24rem;
+    height: 1.24rem;
+    display: block;
+    position: absolute;
+    bottom: 0.9rem;
+    right: 1.3rem;
+    background: url("../images/top.png") no-repeat;
+    background-size: contain;
+}
+.i_icon {
+    width: 0.3rem;
+    height: 0.3rem;
+    display: block;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.i_arrow {
+    width: 0.8rem;
+    height: 0.8rem;
+    display: block;
+    position: relative;
+}
+
+.i_arrow em {
+    height: 0.04rem;
+    width: 0.3rem;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -0.12rem;
+    margin-top: -0.12rem;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.i_arrow b {
+    height: 0.4rem;
+    width: 0.3rem;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -0.09rem;
+    margin-top: 0.4rem;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.i_arrow.i_arrow_left {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+}
+
+.i_arrow.i_arrow_top {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+#forhorview {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+}
+
+#forhorview p {
+    font-size: 0.12rem;
+    color: #ddd;
+}
+
+#forhorview.show {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+}
+
+.mask {
+    transition: opacity 0.3s ease-in-out 0s;
+    -moz-transition: opacity 0.3s ease-in-out 0s;
+    -webkit-transition: opacity 0.3s ease-in-out 0s;
+    -o-transition: opacity 0.3s ease-in-out 0s;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    z-index: 999;
+}
+
+.mask.show {
+    display: block;
+}
+
+#share .refer_insetapp {
+    position: relative;
+    margin: 0 auto;
+    top: 0.4rem;
+    width: 6rem;
+    height: 1.8rem;
+    border-left: .04rem solid #fff;
+    border-right: .04rem solid #fff;
+    border-bottom: .04rem solid #fff;
+    padding-top: 0.36rem;
+}
+
+#share .refer_insetapp p {
+    font-size: 0.48rem;
+    text-align: center;
+}
+
+.refer_insetapp p {
+    color: #fff;
+}
+
+#share .refer_insetapp .arrow_line {
+    display: table;
+    width: 100%;
+    -webkit-transform: translate(0, -0.36rem);
+    -moz-transform: translate(0, -0.36rem);
+    -ms-transform: translate(0, -0.36rem);
+    -o-transform: translate(0, -0.36rem);
+    transform: translate(0, -0.36rem);
+}
+
+#share .refer_insetapp .arrow_line em,
+#share .refer_insetapp .arrow_line span {
+    display: block;
+    height: 0.04em;
+    background: #fff;
+}
+
+#share .refer_insetapp .arrow_line em {
+    float: left;
+    margin-right: 0.04rem;
+    width: 4.66rem;
+}
+
+#share .refer_insetapp .arrow_line span {
+    float: right;
+    width: 0.80rem;
+    margin-left: 0.04rem;
+}
+
+#share .refer_insetapp .arrow_line i {
+    display: block;
+    float: left;
+    width: 0.4rem;
+    height: 0.4rem;
+    border-left: .04rem solid #fff;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-top: .04rem solid #fff;
+    margin-top: -0.2rem;
+}
+
+
+#share .NIE-share-bar a {
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+    -webkit-transform: scale(0, 0);
+    -moz-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
+    -o-transform: scale(0, 0);
+    transform: scale(0, 0);
+    font-size: 1em;
+}
+
+#share.show .NIE-share-bar a {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+}
+
+.nie_share {
+    font-size: 0.24rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.appinside .nie_share {
+    display: none;
+}
+
+.appinside .refer_insetapp {
+    display: block;
+}
+
+.refer_insetapp {
+    display: none;
+}
+
+#NIE-share-m .NIE-mshare-dark {
+    background: transparent;
+}
+
+#NIE-share-m .NIE-mshare-dark .NIE-share-bar a {
+    background-color: #38a3fa;
+    border-width: 0;
+}
+
+#md_attention .attention i {
+    background-color: #38a3fa;
+}
+
+
+#NIE-share-m .NIE-mshare-dark .NIE-share-bar a.NIE-mshare-btn-wx {
+    display: none;
+}
+
+
+
+
+/*自定义*/
+.time{
+    position: absolute;
+    font-size: 0.373rem;
+    line-height: 0.373rem;
+    color: #f0c37f;
+    top: 6.44rem;
+    left: 1.95rem;
+}
+.link1,.link2,.link3{
+    position: absolute;
+    display: block;
+    width: 2.8rem;
+    height:1.5rem ;
+    top: 7.8rem;
+}
+.link1{
+left: .5rem;
+}
+.link2{
+    left:3.5rem;
+}
+.link3{
+    left: 6.7rem;
+}
+.goindex{
+    position: absolute;
+    width: 2.9rem;
+    height: 1.5rem;
+    top: 0.3rem;
+    left: 3.5rem;
+}
+p.title{
+    font-size: .4rem;
+    line-height: .4rem;
+    margin: .4rem 0 0;
+    color: #c14930;
+}
+.nyConTxt p{
+    color: #51170b;
+}
+.nyConTxt p.pic_info{
+    color: #5a5a5a;
+text-align: center;
+}
